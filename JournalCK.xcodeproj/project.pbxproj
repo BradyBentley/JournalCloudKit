@@ -8,20 +8,29 @@
 
 /* Begin PBXBuildFile section */
 		26CD764221DAB76100511D22 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CD764121DAB76100511D22 /* AppDelegate.swift */; };
-		26CD764421DAB76100511D22 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CD764321DAB76100511D22 /* ViewController.swift */; };
 		26CD764721DAB76100511D22 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26CD764521DAB76100511D22 /* Main.storyboard */; };
 		26CD764921DAB76300511D22 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26CD764821DAB76300511D22 /* Assets.xcassets */; };
 		26CD764C21DAB76300511D22 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26CD764A21DAB76300511D22 /* LaunchScreen.storyboard */; };
+		26CD765621DAB77600511D22 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26CD765521DAB77600511D22 /* CloudKit.framework */; };
+		26CD765921DAB86100511D22 /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CD765821DAB86100511D22 /* Entry.swift */; };
+		26CD765C21DABEFD00511D22 /* EntryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CD765B21DABEFD00511D22 /* EntryController.swift */; };
+		26CD765F21DAD3C000511D22 /* EntryListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CD765E21DAD3C000511D22 /* EntryListTableViewController.swift */; };
+		26CD766221DAD66000511D22 /* EntryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CD766121DAD66000511D22 /* EntryDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		26CD763E21DAB76100511D22 /* JournalCK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JournalCK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26CD764121DAB76100511D22 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		26CD764321DAB76100511D22 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		26CD764621DAB76100511D22 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		26CD764821DAB76300511D22 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		26CD764B21DAB76300511D22 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		26CD764D21DAB76300511D22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		26CD765321DAB77300511D22 /* JournalCK.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = JournalCK.entitlements; sourceTree = "<group>"; };
+		26CD765521DAB77600511D22 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		26CD765821DAB86100511D22 /* Entry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; };
+		26CD765B21DABEFD00511D22 /* EntryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryController.swift; sourceTree = "<group>"; };
+		26CD765E21DAD3C000511D22 /* EntryListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryListTableViewController.swift; sourceTree = "<group>"; };
+		26CD766121DAD66000511D22 /* EntryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26CD765621DAB77600511D22 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +50,7 @@
 			children = (
 				26CD764021DAB76100511D22 /* JournalCK */,
 				26CD763F21DAB76100511D22 /* Products */,
+				26CD765421DAB77600511D22 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +65,58 @@
 		26CD764021DAB76100511D22 /* JournalCK */ = {
 			isa = PBXGroup;
 			children = (
+				26CD765321DAB77300511D22 /* JournalCK.entitlements */,
+				26CD765721DAB83700511D22 /* Resources */,
+				26CD765A21DABEE700511D22 /* Model */,
+				26CD765D21DABF0100511D22 /* ModelController */,
+				26CD766021DAD3C600511D22 /* ViewController */,
+			);
+			path = JournalCK;
+			sourceTree = "<group>";
+		};
+		26CD765421DAB77600511D22 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				26CD765521DAB77600511D22 /* CloudKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		26CD765721DAB83700511D22 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				26CD764121DAB76100511D22 /* AppDelegate.swift */,
-				26CD764321DAB76100511D22 /* ViewController.swift */,
 				26CD764521DAB76100511D22 /* Main.storyboard */,
 				26CD764821DAB76300511D22 /* Assets.xcassets */,
 				26CD764A21DAB76300511D22 /* LaunchScreen.storyboard */,
 				26CD764D21DAB76300511D22 /* Info.plist */,
 			);
-			path = JournalCK;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		26CD765A21DABEE700511D22 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				26CD765821DAB86100511D22 /* Entry.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		26CD765D21DABF0100511D22 /* ModelController */ = {
+			isa = PBXGroup;
+			children = (
+				26CD765B21DABEFD00511D22 /* EntryController.swift */,
+			);
+			path = ModelController;
+			sourceTree = "<group>";
+		};
+		26CD766021DAD3C600511D22 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				26CD765E21DAD3C000511D22 /* EntryListTableViewController.swift */,
+				26CD766121DAD66000511D22 /* EntryDetailViewController.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -96,6 +151,14 @@
 				TargetAttributes = {
 					26CD763D21DAB76100511D22 = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -135,7 +198,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				26CD764421DAB76100511D22 /* ViewController.swift in Sources */,
+				26CD765C21DABEFD00511D22 /* EntryController.swift in Sources */,
+				26CD765921DAB86100511D22 /* Entry.swift in Sources */,
+				26CD765F21DAD3C000511D22 /* EntryListTableViewController.swift in Sources */,
+				26CD766221DAD66000511D22 /* EntryDetailViewController.swift in Sources */,
 				26CD764221DAB76100511D22 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -282,8 +348,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = JournalCK/JournalCK.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = JournalCK/Info.plist;
+				DEVELOPMENT_TEAM = D7Q6ZCPJ6Q;
+				INFOPLIST_FILE = "$(SRCROOT)/JournalCK/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -299,8 +367,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = JournalCK/JournalCK.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = JournalCK/Info.plist;
+				DEVELOPMENT_TEAM = D7Q6ZCPJ6Q;
+				INFOPLIST_FILE = "$(SRCROOT)/JournalCK/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

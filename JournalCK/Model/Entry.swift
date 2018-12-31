@@ -12,8 +12,8 @@ import CloudKit
 class Entry {
     
     // MARK: - Properties
-    let title: String
-    let body: String
+    var title: String
+    var body: String
     let ckRecordID: CKRecord.ID
     
     // MARK: - Initialization
@@ -29,17 +29,25 @@ class Entry {
         self.init(title: title, body: body, ckRecordID: ckRecord.recordID)
     }
 }
-
+// MARK: - Constants
 struct Constants{
     static let TitleKey = "title"
     static let BodyKey = "body"
     static let recordKey = "Entry"
 }
 
+// MARK: - CKRecord
 extension CKRecord {
     convenience init(entry: Entry) {
         self.init(recordType: Constants.recordKey, recordID: entry.ckRecordID)
         self.setValue(entry.title, forKey: Constants.TitleKey)
         self.setValue(entry.body, forKey: Constants.BodyKey)
+    }
+}
+
+// MARK: - Equatable
+extension Entry: Equatable {
+    static func == (lhs: Entry, rhs: Entry) -> Bool {
+        return lhs.body == rhs.body && lhs.title == rhs.title
     }
 }
